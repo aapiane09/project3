@@ -1,0 +1,10 @@
+body {
+  background-color: #F1F1F1; }
+
+.container {
+  width: 80%; }
+
+nav {
+  background-color: white; }
+  nav .brand-logo, nav li a {
+    color: red; }

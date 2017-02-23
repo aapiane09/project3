@@ -1,0 +1,25 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "An app where people can find translators and interpreters to help with situations in their daily lives",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aapiane09/project3.git"
+  },
+  "author": "Alessandro Pianetta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aapiane09/project3/issues"
+  },
+  "homepage": "https://github.com/aapiane09/project3#readme",
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1"
+  }
+}

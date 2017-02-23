@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="project">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Project 3</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/app.css">
+
+    <!-- JavaScript for Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <!-- ngRoute routing module from angular -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+
+    <!-- Local JavaScript -->
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/IndexController.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" ng-controller="IndexController">
+      <h1>Project 3</h1>
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
