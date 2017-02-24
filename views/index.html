@@ -6,9 +6,9 @@
     <title>Project 3</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Local CSS -->
     <link rel="stylesheet" href="/css/app.css">
-
     <!-- JavaScript for Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <!-- ngRoute routing module from angular -->
@@ -21,9 +21,18 @@
   </head>
 
   <body>
-    <div class="container" ng-controller="IndexController">
-      <h1>Project 3</h1>
-      <div ng-view></div>
-    </div>
+    <nav>
+        <div id="logo" class="six columns">
+          <span>Project {{1+1+1}}</span>
+        </div>
+        <div class="six columns">
+          <ul>
+            <a href="#"><li id="login">Login</li></a>
+            <a href="#"><li id="signup">Sign Up</li></a>
+          </ul>
+        </div>
+    </nav>
+    <div ng-view></div>
+
   </body>
 </html>

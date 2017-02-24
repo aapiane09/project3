@@ -1,14 +1,61 @@
-body {
-  background-color: #F1F1F1;
-}
-
-.container {
-  width: 80%
-}
+// body {
+//   background-color: #F1F1F1;
+// }
+//
+// .container {
+//   width: 80%
+// }
+//
+// nav {
+//   background-color: white;
+//   .brand-logo, li a {
+//     color: red;
+//   }
+// }
 
 nav {
-  background-color: white;
-  .brand-logo, li a {
-    color: red;
+  height: 60px;
+  width: 100%;
+  background-color: #FF4338;
+}
+
+#logo span {
+  padding-left: 30px;
+  display: inline-block;
+  font-size: 2.28em;
+}
+
+ul {
+  float: right;
+  margin-right: 20px;
+  a {
+    text-decoration: none;
+    margin: 10px 8px 5px 20px;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 0px 0px 5px;
+      padding: 5px 15px;
+      border: 1px solid white;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
+    }
+    #login {
+      color: white;
+    }
+    #login:hover {
+      opacity: .6;
+    }
+    #signup {
+      background-color: white;
+      color: #FF4338;
+    }
   }
+}
+
+#heroimg {
+  background-image: url("/images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 700px;
 }
