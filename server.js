@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var app = express();
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
+app.use('/vendor', express.static(__dirname + '/node_modules'));
 app.use(bodyParser.urlencoded({ extended: true }));
 // need to add this so that we can accept request payloads
 app.use(bodyParser.json());

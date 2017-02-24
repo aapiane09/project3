@@ -1,6 +1,6 @@
 console.log('App.js Sanity Check');
 
-angular.module('project', ['ngRoute'])
+angular.module('project', ['ngRoute', 'satellizer'])
        .config(config);
 
 
