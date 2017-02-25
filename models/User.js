@@ -50,10 +50,11 @@ userSchema.pre('save', function (next) {
 
 userSchema.methods.comparePassword = function (password, done) {
   console.log(password); //Password
+  console.log(done);
   console.log(this); //user ID
-  console.log(this.email); //Undefined
+  console.log(this.password); //Undefined
   bcrypt.compare(password, this.password, function (err, isMatch) {
-    console.log(err)
+    // console.log(err);
     done(err, isMatch);
   });
 };

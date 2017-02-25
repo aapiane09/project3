@@ -1,13 +1,13 @@
 console.log('App.js Sanity Check');
 
 angular.module('project', ['ngRoute', 'satellizer'])
-       .config(config);
-      //  .controller('LoginController', LoginController),
-      //  .controller('SignupController', SignupController),
+       .config(config),
+       .controller('LoginController', LoginController),
+       .controller('SignupController', SignupController),
+        .service('Account', Account);
       //  .controller('LogoutController', LogoutController),
       //  .controller('ProfileController', ProfileController),
       //  .controller('TranslatorsIndexController' TranslatorsIndexController),
-      //  .service('Account', Account);
 
 
   ////////////

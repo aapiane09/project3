@@ -7,10 +7,10 @@ var express = require('express'),
     db = require('./models'),
     mongoose = require('mongoose'),
     controllers = require('./controllers'),
-    auth = require('./resources/auth');
+    auth = require('./resources/auth'),
+    util = require('util');
 
 require('dotenv').load();
-
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
@@ -88,7 +88,12 @@ app.get('/templates/:name', function templates(req, res) {
  });
 
  app.post('/auth/login', function (req, res) {
+  //  console.log("Server.js req" + req);
+  //  console.log(util.inspect(req, false, null))
+  //  console.log("Server.js res" + res);
+  //  console.log(util.inspect(res, false, null))
    db.User.findOne({ email: req.body.email }, '+password', function (err, user) {
+     console.log("Server.js" + user); //Only ID
      if (!user) {
        console.log(user);
        return res.status(401).send({ message: 'Invalid email.' });
