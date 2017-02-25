@@ -1,29 +1,32 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcryptjs'),
-    Contact = require("Contact"),
-    Availability = require("Availability");
+    Contact = require('./Contact'),
+    Residence = require("./Residence"),
+    Availability = require("./Availability");
 
 
 
 var userSchema = new Schema({
   created: { type: Date },
   updated: { type: Date },
-  firstname: String,
-  lastname: String,
+  firstName: String,
+  lastName: String,
   username: String,
-  email: {String, unique: true, lowercase: true} ,
-  password: { String, select: false },
+  email: String ,
+  password: String,
   language: [String],
   specialty: [String],
-  age: { Number, min: 18, max: 125 },
-  gender: [String] ,
-  contactinfo: [ Contact.schema ] ,
-  auth: { Number, min: 0, max: 2 },
+  residence: [ Residence.schema ],
+  age: Number,
+  gender: String,
+  contactInfo: [ Contact.schema ] ,
+  auth: Number,
   professional: Boolean,
   availability: [ Availability.schema ],
   profilepic: String
 });
+
 userSchema.pre('save', function (next) {
   // set created and updated
   now = new Date();
@@ -46,7 +49,11 @@ userSchema.pre('save', function (next) {
 });
 
 userSchema.methods.comparePassword = function (password, done) {
+  console.log(password); //Password
+  console.log(this); //user ID
+  console.log(this.email); //Undefined
   bcrypt.compare(password, this.password, function (err, isMatch) {
+    console.log(err)
     done(err, isMatch);
   });
 };

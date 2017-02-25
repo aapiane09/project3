@@ -1,6 +1,5 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    bcrypt = require('bcryptjs');
+    Schema = mongoose.Schema;
 
 
 var availabilitySchema = new Schema({
