@@ -42,7 +42,7 @@ userSchema.pre('save', function (next) {
   }
   bcrypt.genSalt(10, function (err, salt) {
     bcrypt.hash(user.password, salt, function (err, hash) {
-      user.password = hash;
+      user.password = hash; //Gets correct hashed password
       next();
     });
   });
@@ -53,7 +53,6 @@ userSchema.methods.comparePassword = function (password, done) {
   console.log(this); //user ID
   console.log(this.password); //Undefined
   bcrypt.compare(password, this.password, function (err, isMatch) {
-    console.log(this.password); //Undefined
     console.log(err);
     done(err, isMatch);
   });

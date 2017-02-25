@@ -88,8 +88,7 @@ app.get('/templates/:name', function templates(req, res) {
  });
 
  app.post('/auth/login', function (req, res) {
-   db.User.findOne({ email: req.body.email }, '+password', function (err, user) {
-     console.log("Server.js" + user); //Only ID
+   db.User.findOne({ email: req.body.email }, function (err, user) {
      if (!user) {
        return res.status(401).send({ message: 'Invalid email.' });
      }
