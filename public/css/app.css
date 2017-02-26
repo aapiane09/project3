@@ -823,6 +823,9 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+body {
+  background-color: #F1F1F1; }
+
 nav {
   height: 60px;
   width: 100%;
@@ -855,6 +858,9 @@ ul {
       background-color: white;
       color: #FF4338; }
 
+.container {
+  padding: 5% 0; }
+
 #heroimg {
   background-image: url("/images/hero-img.jpg");
   background-position: center;
@@ -872,8 +878,26 @@ ul {
   background-color: #FF4338;
   border-color: #FF4338; }
 
-img {
-  height: 100px;
-  width: 100px;
+.translatorcard {
+  background-color: white;
+  border: 1px solid #F1F1F1;
+  padding: 5px; }
+
+.cardprofilepic {
+  width: 100%;
   border: 1px solid black;
-  border-radius: 200%; }
+  border-radius: 200%;
+  margin: 10% 0 0 10%; }
+
+.name {
+  display: inline;
+  margin-right: 5%; }
+
+.blurb {
+  color: #7C7C7C;
+  font-size: .85em;
+  display: inline-block;
+  padding-right: 10px; }
+
+hr {
+  margin: 3px; }

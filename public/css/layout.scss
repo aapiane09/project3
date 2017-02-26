@@ -1,3 +1,7 @@
+body {
+  background-color: #F1F1F1;
+}
+
 nav {
   height: 60px;
   width: 100%;
@@ -36,4 +40,8 @@ ul {
       color: #FF4338;
     }
   }
+}
+
+.container {
+  padding: 5% 0;
 }
