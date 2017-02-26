@@ -878,6 +878,9 @@ ul {
   background-color: #FF4338;
   border-color: #FF4338; }
 
+#location {
+  height: 35px; }
+
 .translatorcard {
   background-color: white;
   border: 1px solid #F1F1F1;
@@ -892,6 +895,9 @@ ul {
 .name {
   display: inline;
   margin-right: 5%; }
+
+.location {
+  margin-left: 5%; }
 
 .blurb {
   color: #7C7C7C;

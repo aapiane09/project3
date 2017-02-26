@@ -2,7 +2,6 @@ console.log('App.js Sanity Check');
 
 angular.module('project', ['ngRoute', 'satellizer'])
        .config(config);
-      //  .controller('TranslatorsIndexController' TranslatorsIndexController);
       //  .controller('LoginController', LoginController),
       //  .controller('SignupController', SignupController),
         // .service('Account', Account),
@@ -24,7 +23,7 @@ function config (  $routeProvider,   $locationProvider  )  {
       controllerAs: 'indexCtrl'
     })
     .when('/translators', {
-      controller: 'IndexController', //CHANGE TO TranslatorsIndexController
+      controller: 'TranslatorsIndexController',
       templateUrl: '/templates/translatorstemplate',
       controllerAs: 'translatorsCtrl',
       // resolve: {
