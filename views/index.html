@@ -6,24 +6,38 @@
     <title>Project 3</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Local CSS -->
     <link rel="stylesheet" href="/css/app.css">
-
     <!-- JavaScript for Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <!-- ngRoute routing module from angular -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+    <script src="/vendor/satellizer/dist/satellizer.min.js"></script>
 
     <!-- Local JavaScript -->
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/IndexController.js"></script>
+    <script type="text/javascript" src="/js/controllers/TranslatorsIndexController.js"></script>
+
 
   </head>
 
-  <body>
-    <div class="container" ng-controller="IndexController">
-      <h1>Project 3</h1>
-      <div ng-view></div>
-    </div>
+  <body ng-controller="MainController as mainCtrl">
+    <nav>
+        <div id="logo" class="six columns">
+          <span>Project {{1+1+1}}</span>
+        </div>
+        <div class="six columns">
+          <ul>
+            <a href="/login"><li id="login" ng-show="!mainCtrl.currentUser()">Login</li></a>
+            <a href="/signup"><li id="signup" ng-show="!mainCtrl.currentUser()">Sign Up</li></a>
+            <a href="/profile"><li id="profile" ng-show="mainCtrl.currentUser()">Profile</li></a>
+            <a ng-href="/logout"><li id="logout" ng-show="mainCtrl.currentUser()">Log Out</li></a>
+          </ul>
+        </div>
+    </nav>
+    <div ng-view></div>
+
   </body>
 </html>

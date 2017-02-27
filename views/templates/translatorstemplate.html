@@ -1,0 +1,87 @@
+<div class="container translators">
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Find a Translator</h2>
+    </div>
+    <div class="twelve columns">
+      <p>Find a translator for the language you want to learn. Browse profiles of translators and choose a translator based on their experience and reviews from students like you. With thousands of translators, you'll easily be able to find a translator that fits your needs.</p>
+    </div>
+    <form>
+      <div class="row">
+        <div class="one-third column">
+          <label for="L1Input">I speak...</label>
+          <select class="u-full-width" id="L1Input"  ng-model="language">
+            <option value="English">English</option>
+            <option value="Japanese">日本語</option>
+            <option value="French">Français</option>
+            <option value="Spanish">Español</option>
+            <option value="Indonesian">Bahasa Indonesia</option>
+            <option value="Hebrew">עברית</option>
+            <option value="Arabic">العَرَبِيَّة</option>
+          </select>
+        </div>
+        <div class="one-third column">
+          <label for="specialty">I'm good at...</label>
+          <select class="u-full-width" id="specialty"  ng-model="specialty">
+            <option value="Medicine">Medicine</option>
+            <option value="Music">Music</option>
+            <option value="Government">Government</option>
+            <option value="Translation">Translation</option>
+          </select>
+        </div>
+
+        <div class="one-third column">
+          <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Search">
+        </div>
+      </div>
+      <div class="row">
+        <div class="two columns">
+          <label for="ageselect">Age</label>
+          <input type="number" class="u-full-width" id="ageselect" ng-model="age"></input>
+        </div>
+        <div class="two columns">
+          <label for="genderselect">Gender</label>
+          <select class="u-full-width" id="genderselect" ng-model="gender">
+            <option value="🚹">🚹  Male</option>
+            <option value="🚺">🚺  Female</option>
+            <option value="🚻">🚻  Other</option>
+          </select>
+        </div>
+        <div class="two columns">
+          <label for="availability">Availability</label>
+          <select class="u-full-width" id="availability" ng-model="availability" disabled>
+            <option value="morning">🌄  Morning</option>
+            <option value="noon">☀️  Noon</option>
+            <option value="afternoon">🌇  Afternoon</option>
+            <option value="evening">🌃 Evening</option>
+            <option value="night">🌙  Night</option>
+          </select>
+        </div>
+        <div class="five columns">
+          <label for="location">Location</label>
+          <input class="u-full-width" id="location" ng-model="location" placeholder="San Francisco, United States" disabled></input>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row translatorcard" ng-repeat="user in translatorsCtrl.users | limitTo: 25 | filter: { language : language, age : age , gender : gender, specialty : specialty}">
+    <div class="two columns">
+      <img class="cardprofilepic" src={{user.profilepic}}>
+    </div>
+    <div class="ten columns">
+      <div class="row">
+        <div class="eight columns bio">
+          <h5 class="name">{{user.username}}</h5><span class="agegender">{{user.age}} | {{user.gender}}</span><span class="location">{{user.residence[0].city}}, {{user.residence[0].country}}</span>
+          <span class="blurb">Hodor hodor - hodor hodor hodor; hodor hodor; hodor hodor? Hodor, hodor, hodor. Hodor hodor? Hodor! Hodor hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor hodor! Hodor hodor hodor hodor hodor hodor; hodor hodor? Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor; hodor hodor - hodor hodor!</span>
+        </div>
+        <div class="four columns">
+          <h6><strong>Languages</strong></h6>
+          <span class="languages" ng-repeat="lang in user.language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;</span></span>
+          <hr>
+          <h6><strong>Specialties</strong></h6>
+          <span class="specialties" ng-repeat="specialty in user.specialty">{{specialty}}<span ng-hide="$last">,&nbsp;</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

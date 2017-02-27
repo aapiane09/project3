@@ -1,0 +1,22 @@
+<form ng-submit="signupCtrl.signup()">
+  <div class="row">
+    <div class="one-third column">
+      <label for="email">Email Address</label>
+      <input type="text" class="u-full-width" id="email" ng-model="signupCtrl.new_user.email"></input>
+    </div>
+    <div class="one-third column">
+      <label for="password">Password</label>
+      <input type="password" class="u-full-width" id="password" ng-model="signupCtrl.new_user.password"></input>
+    </div>
+
+    <div class="one-third column">
+      <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Sign Up"></input>
+    </div>
+  </div>
+  <div class="row">
+    <div class="one-third column">
+      <label for="username">Username</label>
+      <input type="text" class="u-full-width" id="username" ng-model="signupCtrl.new_user.username"></input>
+    </div>
+  </div>
+</form>

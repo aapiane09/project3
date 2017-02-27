@@ -1,0 +1,52 @@
+.translators .four {
+  margin-left: 0;
+  width: 33%;
+  .select {
+    border-radius: 0;
+  }
+}
+
+#searchBtn {
+  margin-top: 29px;
+  background-color: #FF4338;
+  border-color: #FF4338;
+}
+
+#location {
+  height: 35px;
+}
+
+.translatorcard {
+  background-color: white;
+  border: 1px solid #F1F1F1;
+  padding: 5px;
+}
+
+.cardprofilepic {
+  // height: 100px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 200%;
+  margin: 10% 0 0 10%;
+}
+
+.name {
+  display: inline;
+  margin-right: 5%;
+}
+
+.location {
+  margin-left: 5%;
+}
+
+.blurb {
+  color: #7C7C7C;
+  font-size: .85em;
+  display: inline-block;
+  padding-right: 10px;
+
+}
+
+hr {
+  margin: 3px;
+}

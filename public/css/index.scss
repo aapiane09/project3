@@ -1,14 +1,10 @@
-body {
-  background-color: #F1F1F1;
-}
+// body {
+//   background-color: #F1F1F1;
+// }
 
-.container {
-  width: 80%
-}
-
-nav {
-  background-color: white;
-  .brand-logo, li a {
-    color: red;
-  }
+#heroimg {
+  background-image: url("/images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 700px;
 }
