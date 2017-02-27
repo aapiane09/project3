@@ -1,0 +1,16 @@
+<form ng-submit="loginCtrl.login()">
+  <div class="row">
+    <div class="one-third column">
+      <label for="email">Email Address</label>
+      <input type="text" class="u-full-width" id="email" ng-model="loginCtrl.new_user.email"></input>
+    </div>
+    <div class="one-third column">
+      <label for="password">Password</label>
+      <input type="password" class="u-full-width" id="password" ng-model="loginCtrl.new_user.password"></input>
+    </div>
+
+    <div class="one-third column">
+      <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Log In"></input>
+    </div>
+  </div>
+</form>

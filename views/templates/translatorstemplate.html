@@ -16,6 +16,8 @@
             <option value="French">Français</option>
             <option value="Spanish">Español</option>
             <option value="Indonesian">Bahasa Indonesia</option>
+            <option value="Hebrew">עברית</option>
+            <option value="Arabic">العَرَبِيَّة</option>
           </select>
         </div>
         <div class="one-third column">
@@ -28,7 +30,7 @@
           </select>
         </div>
 
-        <div class="two columns offset-by-one">
+        <div class="one-third column">
           <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Search">
         </div>
       </div>
@@ -40,14 +42,14 @@
         <div class="two columns">
           <label for="genderselect">Gender</label>
           <select class="u-full-width" id="genderselect" ng-model="gender">
-            <option value="Male">🚹  Male</option>
-            <option value="Female">🚺  Female</option>
-            <option value="Other">🚻  Other</option>
+            <option value="🚹">🚹  Male</option>
+            <option value="🚺">🚺  Female</option>
+            <option value="🚻">🚻  Other</option>
           </select>
         </div>
         <div class="two columns">
           <label for="availability">Availability</label>
-          <select class="u-full-width" id="availability" ng-model="availability">
+          <select class="u-full-width" id="availability" ng-model="availability" disabled>
             <option value="morning">🌄  Morning</option>
             <option value="noon">☀️  Noon</option>
             <option value="afternoon">🌇  Afternoon</option>
@@ -57,12 +59,12 @@
         </div>
         <div class="five columns">
           <label for="location">Location</label>
-          <input class="u-full-width" id="location" ng-model="location" placeholder="San Francisco, United States"></input>
+          <input class="u-full-width" id="location" ng-model="location" placeholder="San Francisco, United States" disabled></input>
         </div>
       </div>
     </form>
   </div>
-  <div class="row translatorcard" ng-repeat="user in translatorsCtrl.users | filter: { language : language, age : age , gender : gender, specialty : specialty}">
+  <div class="row translatorcard" ng-repeat="user in translatorsCtrl.users | limitTo: 25 | filter: { language : language, age : age , gender : gender, specialty : specialty}">
     <div class="two columns">
       <img class="cardprofilepic" src={{user.profilepic}}>
     </div>

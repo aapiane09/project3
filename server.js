@@ -50,9 +50,9 @@ app.get('/templates/:name', function templates(req, res) {
  app.get('/api', controllers.api.index);
  app.get('/api/users', controllers.users.users_index);
  app.get('/api/users/:id', controllers.users.users_show);
-
  app.get('/api/me', auth.ensureAuthenticated, function (req, res) {
   db.User.findById(req.user, function (err, user) {
+    console.log(user);
     res.send(user);
   });
 });
@@ -74,7 +74,7 @@ app.get('/templates/:name', function templates(req, res) {
      var user = new db.User({
       //  firstName: req.body.firstName,
       //  lastName: req.body.lastName,
-      //  username: req.body.username,
+       username: req.body.username,
        email: req.body.email,
        password: req.body.password
      });

@@ -1,12 +1,13 @@
 console.log('App.js Sanity Check');
 
 angular.module('project', ['ngRoute', 'satellizer'])
-       .config(config);
-      //  .controller('LoginController', LoginController),
-      //  .controller('SignupController', SignupController),
-        // .service('Account', Account),
-      //  .controller('LogoutController', LogoutController),
-      //  .controller('ProfileController', ProfileController),
+       .config(config)
+       .service('Account', Account)
+       .controller('MainController', MainController)
+       .controller('SignupController', SignupController)
+       .controller('LoginController', LoginController)
+       .controller('ProfileController', ProfileController)
+       .controller('LogoutController', LogoutController);
 
 
   ////////////
@@ -26,9 +27,9 @@ function config (  $routeProvider,   $locationProvider  )  {
       controller: 'TranslatorsIndexController',
       templateUrl: '/templates/translatorstemplate',
       controllerAs: 'translatorsCtrl',
-      // resolve: {
-      //   loginRequired: loginRequired
-      // }
+      resolve: {
+        loginRequired: loginRequired
+      }
     })
     .when('/signup', {
       controller: 'SignupController',
@@ -41,23 +42,20 @@ function config (  $routeProvider,   $locationProvider  )  {
     .when('/login', {
       controller: 'LoginController',
       templateUrl: '/templates/logintemplate',
-      controllerAs: 'loginCtrl',
+      controllerAs: 'loginCtrl'
+    })
+    .when('/profile', {
+      controller: 'ProfileController',
+      templateUrl: '/templates/profiletemplate',
+      controllerAs: 'profileCtrl',
       resolve: {
         loginRequired: loginRequired
       }
     })
     .when('/logout', {
       controller: 'LogoutController',
-      templateUrl: '/templates/logouttemplate',
+      template: ' ',
       controllerAs: 'logoutCtrl',
-      resolve: {
-        loginRequired: loginRequired
-      }
-    })
-    .when('/profile', {
-      controller: 'ProfileController',
-      templateUrl: '/templates/profiletemplate',
-      controllerAs: 'profileCtrl',
       resolve: {
         loginRequired: loginRequired
       }
@@ -162,10 +160,11 @@ function SignupController ($location, Account) {
 
 LogoutController.$inject = ["$location", "Account"]; // minification protection
 function LogoutController ($location, Account) {
+  console.log("Logout Controller loads!")
   Account
     .logout()
     .then(function () {
-        $location.path('/login');
+        $location.path('/');
     });
 }
 
@@ -183,6 +182,12 @@ function ProfileController ($location, Account) {
       });
   };
 }
+
+/////////////////
+// Directives //
+////////////////
+
+
 
 //////////////
 // Services //

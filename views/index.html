@@ -23,15 +23,17 @@
 
   </head>
 
-  <body>
+  <body ng-controller="MainController as mainCtrl">
     <nav>
         <div id="logo" class="six columns">
           <span>Project {{1+1+1}}</span>
         </div>
         <div class="six columns">
           <ul>
-            <a href="#"><li id="login">Login</li></a>
-            <a href="#"><li id="signup">Sign Up</li></a>
+            <a href="/login"><li id="login" ng-show="!mainCtrl.currentUser()">Login</li></a>
+            <a href="/signup"><li id="signup" ng-show="!mainCtrl.currentUser()">Sign Up</li></a>
+            <a href="/profile"><li id="profile" ng-show="mainCtrl.currentUser()">Profile</li></a>
+            <a ng-href="/logout"><li id="logout" ng-show="mainCtrl.currentUser()">Log Out</li></a>
           </ul>
         </div>
     </nav>

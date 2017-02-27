@@ -13,7 +13,7 @@ usersList.push({
   specialty: ["Music"],
   residence: {city:"Los Angeles",    province:"California", country:"United States"},
   age: 35,
-  gender: "Female",
+  gender: "🚺",
   contactInfo: { phone:"(555) 555-5555",
     skype:"queenbey" } ,
   auth: 0,
@@ -37,7 +37,7 @@ usersList.push({
   specialty: ["Medicine"],
   residence: {city:"London", country:"England"},
   age: 29,
-  gender: "Female",
+  gender: "🚺",
   contactInfo: { phone:"(555) 555-5555",
     skype:"adele" } ,
   auth: 0,
@@ -61,7 +61,7 @@ usersList.push({
   specialty: ["Government"],
   residence: {city:"Washington", province:"D.C.", country:"United States"},
   age: 55,
-  gender: "Male",
+  gender: "🚹",
   contactInfo: { phone:"(555) 555-5555",
     skype:"potus44" } ,
   auth: 0,
@@ -85,7 +85,7 @@ usersList.push({
   specialty: ["Translation"],
   residence: {city:"Palo Alto", province:"California", country:"United States"},
   age: 26,
-  gender: "Male",
+  gender: "🚹",
   contactInfo: { phone:"(555) 555-5555",
     skype:"aapiane09" } ,
   auth: 0,
@@ -99,6 +99,31 @@ usersList.push({
   },
   profilepic: "http://cultofthepartyparrot.com/assets/sirocco.gif"
 });
+usersList.push({
+  firstName: "Jesse",
+  lastName: "Smith",
+  username: "jsmith",
+  email: "jsmith@gmail.com" ,
+  password: "test",
+  language: ["English", "Arabic", "Hebrew"],
+  specialty: ["Translation", "Medicine"],
+  residence: {city:"Amman", province:"Amman", country:"Jordan"},
+  age: 32,
+  gender: "🚻",
+  contactInfo: { phone:"(555) 555-5555",
+    skype:"jsmith" } ,
+  auth: 0,
+  professional: true,
+  availability: {
+    morning: false,
+    noon: false,
+    afternoon: false,
+    evening: true,
+    night: true
+  },
+  profilepic: "http://cultofthepartyparrot.com/assets/sirocco.gif"
+});
+
 
 db.User.remove({}, function(err, users) {
     // code in here runs after all users are removed
