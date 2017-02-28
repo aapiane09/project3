@@ -6,15 +6,15 @@
     <div class="ten columns">
       <div class="row">
         <div class="eight columns bio">
-          <h5 class="name">{{mainCtrl.currentUser().username}}</h5><span class="agegender">{{mainCtrl.currentUser.age}} | {{profileCtrl.gender}}</span><span class="location">{{profileCtrl.residence[0].city}}, {{profileCtrl.residence[0].country}}</span>
+          <h5 class="name">{{mainCtrl.currentUser().username}}</h5><span class="agegender">{{mainCtrl.currentUser().age}} | {{mainCtrl.currentUser().gender}}</span><span class="location">{{mainCtrl.currentUser().residence[0].city}}, {{mainCtrl.currentUser().residence[0].country}}</span>
           <span class="blurb">Hodor hodor - hodor hodor hodor; hodor hodor; hodor hodor? Hodor, hodor, hodor. Hodor hodor? Hodor! Hodor hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor hodor! Hodor hodor hodor hodor hodor hodor; hodor hodor? Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor; hodor hodor - hodor hodor!</span>
         </div>
         <div class="four columns">
           <h6><strong>Languages</strong></h6>
-          <span class="languages" ng-repeat="lang in profileCtrl.language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;</span></span>
+          <span class="languages" ng-repeat="lang in mainCtrl.currentUser().language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;</span></span>
           <hr>
           <h6><strong>Specialties</strong></h6>
-          <span class="specialties" ng-repeat="specialty in profileCtrl.specialty">{{specialty}}<span ng-hide="$last">,&nbsp;</span></span>
+          <span class="specialties" ng-repeat="specialty in mainCtrl.currentUser().specialty">{{specialty}}<span ng-hide="$last">,&nbsp;</span></span>
         </div>
       </div>
     </div>

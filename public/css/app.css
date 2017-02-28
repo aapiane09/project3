@@ -907,3 +907,6 @@ ul {
 
 hr {
   margin: 3px; }
+
+#languagelist, #specialtylist, #availabilitylist {
+  height: 100px; }

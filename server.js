@@ -76,7 +76,10 @@ app.get('/templates/:name', function templates(req, res) {
       //  lastName: req.body.lastName,
        username: req.body.username,
        email: req.body.email,
-       password: req.body.password
+       password: req.body.password,
+       language: req.body.language,
+       gender: req.body.gender,
+       specialty: req.body.specialty
      });
      user.save(function (err, result) {
        if (err) {
