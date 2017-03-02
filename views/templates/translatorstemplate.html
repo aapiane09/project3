@@ -10,7 +10,7 @@
       <div class="row">
         <div class="one-third column">
           <label for="L1Input">I speak...</label>
-          <select class="u-full-width" id="L1Input"  ng-model="language">
+          <select class="u-full-width" id="L1Input"  ng-model="query.language">
             <option value="English">English</option>
             <option value="Chinese">中文</option>
             <option value="Spanish">Español</option>
@@ -29,49 +29,48 @@
         </div>
         <div class="one-third column">
           <label for="specialty">I'm good at...</label>
-          <select class="u-full-width" id="specialty"  ng-model="specialty">
+          <select class="u-full-width" id="specialty"  ng-model="query.specialty">
             <option value="Medicine">Medicine</option>
             <option value="Music">Music</option>
             <option value="Government">Government</option>
             <option value="Translation">Translation</option>
           </select>
         </div>
-
-        <div class="one-third column">
-          <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Search">
-        </div>
-      </div>
-      <div class="row">
         <div class="two columns">
           <label for="ageselect">Age</label>
-          <input type="number" class="u-full-width" id="ageselect" ng-model="age"></input>
+          <input type="number" class="u-full-width" id="ageselect" ng-model="query.age"></input>
         </div>
         <div class="two columns">
           <label for="genderselect">Gender</label>
-          <select class="u-full-width" id="genderselect" ng-model="gender">
-            <option value="🚹">🚹  Male</option>
-            <option value="🚺">🚺  Female</option>
-            <option value="🚻">🚻  Other</option>
+          <select class="u-full-width" id="genderselect" ng-model="query.gender">
+            <option value="Male">🚹  Male</option>
+            <option value="Female">🚺  Female</option>
+            <option value="Other">🚻  Other</option>
           </select>
         </div>
-        <div class="two columns">
-          <label for="availability">Availability</label>
-          <select multiple class="u-full-width" id="availability" ng-model="availability" disabled>
-            <option value="morning">🌄  Morning</option>
-            <option value="noon">☀️  Noon</option>
-            <option value="afternoon">🌇  Afternoon</option>
-            <option value="evening">🌃 Evening</option>
-            <option value="night">🌙  Night</option>
-          </select>
+      </div>
+      <div class="row">
+        <div class="three columns">
+          <label for="location-city">City</label>
+          <input type="text" class="u-full-width" id="location-city" ng-model="query.residence.city" placeholder="San Francisco" ></input>
         </div>
-        <div class="five columns">
-          <label for="location">Location</label>
-          <input class="u-full-width" id="location" ng-model="location" placeholder="San Francisco, United States" disabled></input>
+        <div class="three columns">
+          <label for="location-province">State/Province</label>
+          <input type="text" class="u-full-width" id="location-province" ng-model="query.residence.province" placeholder="California" ></input>
         </div>
+        <div class="three columns">
+          <label for="location-country">Country</label>
+          <input type="text" class="u-full-width" id="location-country" ng-model="query.residence.country" placeholder="United States" ></input>
+        </div>
+
+        <div class="three columns">
+          <button id="searchBtn" class="u-full-width" ng-click="clearFilter()" type="button">Reset</button>
+        </div>
+
       </div>
     </form>
   </div>
-  <div class="row translatorcard" ng-repeat="user in translatorsCtrl.users | limitTo: 25 | filter: { language : language, age : age , gender : gender, specialty : specialty}">
+  <div class="row translatorcard" ng-repeat="user in translatorsCtrl.users | limitTo: 25 | filter: query">
     <div class="two columns">
       <img class="cardprofilepic" src={{user.profilepic}}>
     </div>
@@ -79,7 +78,7 @@
       <div class="row">
         <div class="eight columns bio">
           <h5 class="name">{{user.username}}</h5><span class="agegender">{{user.age}} | {{user.gender}}</span><span class="location">{{user.residence[0].city}}, {{user.residence[0].country}}</span>
-          <span class="blurb">Hodor hodor - hodor hodor hodor; hodor hodor; hodor hodor? Hodor, hodor, hodor. Hodor hodor? Hodor! Hodor hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor hodor! Hodor hodor hodor hodor hodor hodor; hodor hodor? Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor; hodor hodor - hodor hodor!</span>
+          <span class="blurb">{{user.blurb | words:50 }}</span>
         </div>
         <div class="four columns">
           <h6><strong>Languages</strong></h6>

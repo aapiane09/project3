@@ -1,24 +1,28 @@
 <div class="container">
-  <form ng-submit="signupCtrl.signup()">
+  <form ng-submit="signupCtrl.signup()" name=signupform>
     <div class="row">
       <div class="one-third column offset-by-two">
         <label for="email">Email Address</label>
-        <input type="text" class="u-full-width" id="email" ng-model="signupCtrl.new_user.email" />
+        <input type="text" name="email" class="u-full-width" id="email" ng-model="signupCtrl.new_user.email" />
       </div>
       <div class="one-third column">
-        <label for="email">Email Address Confirmation</label>
-        <input type="text" class="u-full-width" id="email" ng-model="signupCtrl.new_user.email" />
+        <label for="password">Password</label>
+        <input name="password" type="password" class="u-full-width" id="password" ng-model="signupCtrl.new_user.password" />
       </div>
-    </div>
+      <!-- <div class="one-third column">
+        <label for="emailCompare">Email Address Confirmation</label>
+        <input type="text" name="emailCompare" class="u-full-width" id="emailconfirm" data-ng-model="EmailCompare" required="" data-ng-match="email" /> -->
+      <!-- </div> -->
+    <!-- </div>
     <div class="row">
       <div class="one-third column offset-by-two">
         <label for="password">Password</label>
         <input name="password" type="password" class="u-full-width" id="password" ng-model="signupCtrl.new_user.password" />
-      </div>
-      <div class="one-third column">
-        <label for="password">Password Confirmation</label>
-        <input type="password" class="u-full-width" id="passwordconfirm" ng-model="signupCtrl.new_user.password" />
-      </div>
+      </div> -->
+      <!-- <div class="one-third column">
+        <label for="passwordCompare">Password Confirmation</label>
+        <input name="passwordCompare" type="password" class="u-full-width" id="passwordconfirm" ng-model="signupCtrl.new_user.passwordconfirm" required="" />
+      </div> -->
     </div>
     <hr>
     <div class="row">
@@ -58,7 +62,7 @@
       </div>
       <div class="three columns">
         <label for="specialtylist">Specialty</label>
-        <select multiple class="u-full-width" id="specialtylist"  ng-model="specialty">
+        <select multiple class="u-full-width" id="specialtylist"  ng-model="signupCtrl.new_user.specialty">
           <option value="Translation">Translation</option>
           <option value="Medicine">Medicine</option>
           <option value="Government">Government</option>
@@ -69,43 +73,47 @@
           <option value="Music">Music</option>
         </select>
       </div>
-      <div class="two columns">
+      <!-- <div class="two columns">
         <label for="availabilitylist">Availability</label>
-        <select multiple class="u-full-width" id="availabilitylist" ng-model="availability" disabled>
-          <option value="morning">🌄  Morning</option>
-          <option value="noon">☀️  Noon</option>
-          <option value="afternoon">🌇  Afternoon</option>
-          <option value="evening">🌃 Evening</option>
-          <option value="night">🌙  Night</option>
+        <select multiple class="u-full-width" id="availabilitylist" ng-model="signupCtrl.new_user.availability" >
+          <option value="true">🌄  Morning</option>
+          <option value="true">☀️  Noon</option>
+          <option value="true">🌇  Afternoon</option>
+          <option value="true">🌃 Evening</option>
+          <option value="true">🌙  Night</option>
         </select>
-      </div>
+      </div> -->
       <div class="two columns">
         <label for="ageselect">Age</label>
-        <input type="number" class="u-full-width" id="ageselect" ng-model="age" min="18" max="125"></input>
+        <input type="number" name="age" class="u-full-width" id="ageselect" ng-model="signupCtrl.new_user.age" min="18" max="125"></input>
       </div>
       <div class="two columns">
         <label for="genderselect">Gender</label>
-        <select class="u-full-width" id="genderselect" ng-model="gender">
-          <option value="🚹">🚹  Male</option>
-          <option value="🚺">🚺  Female</option>
-          <option value="🚻">🚻  Other</option>
+        <select class="u-full-width" id="genderselect" ng-model="signupCtrl.new_user.gender">
+          <option value="Male">🚹  Male</option>
+          <option value="Female">🚺  Female</option>
+          <option value="Other">🚻  Other</option>
         </select>
       </div>
+    </div>
+    <div class="row">
+      <label for="profilepic">Profile Pic</label>
+      <input type="text" class="u-full-width" id="profilepic" ng-model="signupCtrl.new_user.profilepic" placeholder="Please input external URL"/>
     </div>
     <hr>
     <div class="row">
       <div class="one-third column">
         <label for="city">City</label>
-        <input type="text" class="u-full-width" id="city" ng-model="signupCtrl.new_user.email" />
+        <input type="text" class="u-full-width" id="city" ng-model="signupCtrl.new_user.residence.city" />
       </div>
       <div class="one-third column">
         <label for="province">State/Province</label>
-        <input type="text" class="u-full-width" id="province" ng-model="signupCtrl.new_user.email" />
+        <input type="text" class="u-full-width" id="province" ng-model="signupCtrl.new_user.residence.province" />
 
       </div>
       <div class="one-third column">
         <label for="country">Country</label>
-        <input type="text" class="u-full-width" id="country" ng-model="signupCtrl.new_user.email" />
+        <input type="text" class="u-full-width" id="country" ng-model="signupCtrl.new_user.residence.country" />
       </div>
     </div>
     <div class="row">

@@ -1,12 +1,11 @@
 console.log('App.js Sanity Check');
 
-angular.module('project', ['ngRoute', 'satellizer'])
+angular.module('intrpretr', ['ngRoute', 'satellizer', 'truncate'])
        .config(config)
        .service('Account', Account)
        .controller('MainController', MainController)
        .controller('SignupController', SignupController)
        .controller('LoginController', LoginController)
-       .controller('ProfileController', ProfileController)
        .controller('LogoutController', LogoutController);
 
 
@@ -156,6 +155,15 @@ function SignupController ($location, Account) {
         }
       );
   };
+
+  vm.add = function() {
+    if (vm.email != vm.emailconfirm) {
+      vm.IsMatch=true;
+      return false;
+    }
+    vm.IsMatch=false;
+  }
+
 }
 
 LogoutController.$inject = ["$location", "Account"]; // minification protection
@@ -166,21 +174,6 @@ function LogoutController ($location, Account) {
     .then(function () {
         $location.path('/');
     });
-}
-
-
-ProfileController.$inject = ["$location", "Account"]; // minification protection
-function ProfileController ($location, Account) {
-  var vm = this;
-  vm.new_profile = {}; // form data
-
-  vm.updateProfile = function() {
-    Account
-      .updateProfile(vm.new_profile)
-      .then(function () {
-        vm.showEditForm = false;
-      });
-  };
 }
 
 /////////////////

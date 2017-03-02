@@ -1,5 +1,5 @@
 angular
-  .module('project')
+  .module('intrpretr')
   .controller('IndexController', IndexController);
 
   IndexController.$inject = ['$routeParams', '$location', '$http', "$scope", "$window"];

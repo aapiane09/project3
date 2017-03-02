@@ -1,22 +1,97 @@
 <div class="container">
-  <div class="row translatorcard">
-    <div class="two columns">
-      <img class="cardprofilepic" src={{mainCtrl.currentUser.profilepic}}>
-    </div>
-    <div class="ten columns">
-      <div class="row">
-        <div class="eight columns bio">
-          <h5 class="name">{{mainCtrl.currentUser().username}}</h5><span class="agegender">{{mainCtrl.currentUser().age}} | {{mainCtrl.currentUser().gender}}</span><span class="location">{{mainCtrl.currentUser().residence[0].city}}, {{mainCtrl.currentUser().residence[0].country}}</span>
-          <span class="blurb">Hodor hodor - hodor hodor hodor; hodor hodor; hodor hodor? Hodor, hodor, hodor. Hodor hodor? Hodor! Hodor hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor hodor! Hodor hodor hodor hodor hodor hodor; hodor hodor? Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor; hodor hodor - hodor hodor!</span>
-        </div>
-        <div class="four columns">
-          <h6><strong>Languages</strong></h6>
-          <span class="languages" ng-repeat="lang in mainCtrl.currentUser().language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;</span></span>
-          <hr>
-          <h6><strong>Specialties</strong></h6>
-          <span class="specialties" ng-repeat="specialty in mainCtrl.currentUser().specialty">{{specialty}}<span ng-hide="$last">,&nbsp;</span></span>
+  <form ng-submit="profileCtrl.updateProfile()">
+    <div class="row profilecard">
+      <div class="three columns">
+        <img id="profilepic" src={{mainCtrl.currentUser().profilepic}}>
+        <br>
+          <div class="ten columns offset-by-one">
+            <button id="editbutton" class="u-full-width" ng-click="editing=!editing" ng-hide="editing">Edit Profile </button>
+            <button id="submitedit" class="u-full-width" ng-show="editing" ng-click="editing=!editing" type="submit">Submit Edit</button>
+            <button id="deletebutton" class="u-full-width" ng-click="" ng-show="editing">Delete Profile </button>
+          </div>
+      </div>
+      <div class="nine columns">
+        <div class="row">
+          <div class="seven columns bio">
+            <h1 class="username-bio" ng-hide="editing">{{mainCtrl.currentUser().username}}</h1>
+            <input type="text" ng-model="profileCtrl.new_profile.username" ng-value="mainCtrl.currentUser().username" placeholder="Username" ng-show="editing">
+            <br>
+            <span class="fullname">
+              <h4 ng-hide="editing">{{mainCtrl.currentUser().firstName}} {{mainCtrl.currentUser().lastName}}</h4>
+              <input type="text" ng-model="profileCtrl.new_profile.firstName" ng-value="mainCtrl.currentUser().firstName" placeholder="First Name" ng-show="editing">
+              <input type="text" ng-model="profileCtrl.new_profile.lastName" ng-value="mainCtrl.currentUser().lastName" placeholder="Last Name" ng-show="editing">
+            </span>
+            <span class="agegender-bio">
+              <h5 ng-hide="editing">{{mainCtrl.currentUser().age}} | {{mainCtrl.currentUser().gender}}</h5>
+              <input type="number" min=18 max=125 ng-model="profileCtrl.new_profile.age" ng-value="mainCtrl.currentUser().age" placeholder="Username" ng-show="editing">
+              <select id="genderselect" ng-model="profileCtrl.new_profile.gender" ng-value="mainCtrl.currentUser().gender" ng-show="editing">
+                <option value="Male">🚹  Male</option>
+                <option value="Female">🚺  Female</option>
+                <option value="Other">🚻  Other</option>
+              </select>
+            </span>
+            <span class="location-bio">
+              <h5 ng-hide="editing">{{mainCtrl.currentUser().residence[0].city}}, {{mainCtrl.currentUser().residence[0].province}},  {{mainCtrl.currentUser().residence[0].country}}</h5>
+            </span>
+          </div>
+          <div class="five columns">
+            <h5 class="contactlistheader">Contact</h5>
+            <hr>
+            <ul class="u-pull-left">
+              <li class="contactinfolist" ng-hide="editing"><strong>email</strong>: {{mainCtrl.currentUser().email}}</li>
+              <strong ng-show="editing">email</strong>: <input type="text" ng-model="profileCtrl.new_profile.email" ng-value="mainCtrl.currentUser().email" ng-show="editing">
+              <li class="contactinfolist" ng-repeat="(key, value) in mainCtrl.currentUser().contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="row profilecard">
+      <div class="twelve columns blurb">
+        <h5>About Me</h5>
+        <span ng-hide="editing">{{mainCtrl.currentUser().blurb}}</span>
+        <textarea name="name" rows="15" cols="125" ng-show="editing" ng-model="profileCtrl.new_profile.blurb" ng-value="mainCtrl.currentUser().blurb"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <h3 class="skillheader"><strong>Languages</strong></h3>
+        <span class="skillbtn" ng-repeat="lang in mainCtrl.currentUser().language | filter : filters : true" ng-hide="editing">
+          {{lang}}
+        </span>
+        <select multiple id="languagelist" class="u-full-width"  ng-model="profileCtrl.new_profile.language" ng-value="mainCtrl.currentUser().language" ng-show="editing">
+          <option value="English">English</option>
+          <option value="Chinese">中文</option>
+          <option value="Spanish">Español</option>
+          <option value="Hindi">हिन्दी</option>
+          <option value="Arabic">العَرَبِيَّة</option>
+          <option value="Portuguese">Português</option>
+          <option value="Bengali">বাংলা</option>
+          <option value="Russian">русский</option>
+          <option value="Japanese">日本語</option>
+          <option value="Punjabi">ਪੰਜਾਬੀ • پنجابی</option>
+          <<option value="German">Deutsch</option>
+          <option value="French">Français</option>
+          <option value="Indonesian">Bahasa Indonesia</option>
+          <option value="Hebrew">עברית</option>
+        </select>
+      </div>
+      <div class="six columns">
+        <h3 class="skillheader"><strong>Specialties</strong></h3>
+        <span class="skillbtn" ng-repeat="specialty in mainCtrl.currentUser().specialty" ng-hide="editing">
+            {{specialty}}
+        </span>
+          <select multiple class="u-full-width" id="specialtylist"  ng-model="profileCtrl.new_profile.specialty" ng-value="mainCtrl.currentUser().specialty" ng-show="editing">
+            <option value="Translation">Translation</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Government">Government</option>
+            <option value="Banking">Banking</option>
+            <option value="Technology">Technology</option>
+            <option value="Business">Business</option>
+            <option value="Travel">Travel</option>
+            <option value="Music">Music</option>
+          </select>
+      </div>
+    </div>
+  </form>
 </div>

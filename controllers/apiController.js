@@ -1,8 +1,8 @@
 function index(req, res) {
   res.json({
-    message: "Welcome to Project 3 API! Here's what you need to know!",
+    message: "Welcome to the Intrpretr API! Here's what you need to know!",
     documentationUrl: "https://github.com/aapiane09/project3/blob/master/README.md",
-    baseUrl: "http://project3.herokuapp.com",
+    baseUrl: "http://intrpretr.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       //User endpoints

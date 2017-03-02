@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="project">
+<html ng-app="intrpretr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Project 3</title>
+    <title>Intrpretr</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -14,11 +14,16 @@
     <!-- ngRoute routing module from angular -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
     <script src="/vendor/satellizer/dist/satellizer.min.js"></script>
+    <script src="/vendor/angular-truncate-2/dist/angular-truncate-2.min.js"></script>
+
+
 
     <!-- Local JavaScript -->
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/IndexController.js"></script>
     <script type="text/javascript" src="/js/controllers/TranslatorsIndexController.js"></script>
+    <script type="text/javascript" src="/js/controllers/ProfileController.js"></script>
+
 
 
   </head>
@@ -26,14 +31,15 @@
   <body ng-controller="MainController as mainCtrl">
     <nav>
         <div id="logo" class="six columns">
-          <span>Project {{1+1+1}}</span>
+          <span>Intrpretr</span>
         </div>
         <div class="six columns">
           <ul>
-            <a href="/login"><li id="login" ng-show="!mainCtrl.currentUser()">Login</li></a>
-            <a href="/signup"><li id="signup" ng-show="!mainCtrl.currentUser()">Sign Up</li></a>
-            <a href="/profile"><li id="profile" ng-show="mainCtrl.currentUser()">Profile</li></a>
-            <a ng-href="/logout"><li id="logout" ng-show="mainCtrl.currentUser()">Log Out</li></a>
+            <a ng-show="mainCtrl.currentUser()" href="/translators"><li id=translatorslink>Translators</li></a>
+            <a ng-show="!mainCtrl.currentUser()" href="/login"><li id="login">Login</li></a>
+            <a ng-show="!mainCtrl.currentUser()" href="/signup"><li id="signup">Sign Up</li></a>
+            <a ng-show="mainCtrl.currentUser()" href="/profile"><li id="profile" ng-show="mainCtrl.currentUser()">Profile</li></a>
+            <a ng-show="mainCtrl.currentUser()" href="/logout"><li id="logout" ng-show="mainCtrl.currentUser()">Log Out</li></a>
           </ul>
         </div>
     </nav>

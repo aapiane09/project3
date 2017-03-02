@@ -16,17 +16,16 @@
   height: 35px;
 }
 
-.translatorcard {
+.translatorcard, .profilecard, .blurb {
   background-color: white;
   border: 1px solid #F1F1F1;
   padding: 5px;
 }
 
 .cardprofilepic {
-  // height: 100px;
   width: 100%;
   border: 1px solid black;
-  border-radius: 200%;
+  border-radius: 100%;
   margin: 10% 0 0 10%;
 }
 
@@ -39,11 +38,16 @@
   margin-left: 5%;
 }
 
+.username-bio, .agegender-bio, .location-bio, .contactlistheader, .fullname {
+  text-align: center;
+  margin: 0;
+}
+
 .blurb {
   color: #7C7C7C;
   font-size: .85em;
   display: inline-block;
-  padding-right: 10px;
+  padding: 5px 10px;
 
 }
 

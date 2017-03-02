@@ -1,5 +1,5 @@
 {
-  "name": "project-3",
+  "name": "intrpretr",
   "version": "1.0.0",
   "description": "An app where people can find translators and interpreters to help with situations in their daily lives",
   "main": "server.js",
@@ -26,5 +26,6 @@
     "jwt-simple": "^0.5.1",
     "moment": "^2.17.1",
     "satellizer": "^0.15.5"
-  }
+  },
+  "devDependencies": {}
 }

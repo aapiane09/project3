@@ -1,11 +1,11 @@
 angular
-  .module('project')
+  .module('intrpretr')
   .controller('TranslatorsIndexController', TranslatorsIndexController);
 
-  IndexController.$inject = ['$http'];
+  TranslatorsIndexController.$inject = ['$http', '$scope'];
 
 
-  function TranslatorsIndexController ($http) {
+  function TranslatorsIndexController ($http, $scope) {
     console.log('TranslatorsIndexController Function Sanity Check!');
     var vm = this;
 
@@ -18,5 +18,11 @@ angular
     }, function errorCallback(response) {
       console.log('There was an error getting the data', response);
     });
+
+    $scope.clearFilter = function() {
+      console.log("xxx");
+      $scope.query = {};
+    };
+
 
   };

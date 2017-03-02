@@ -13,11 +13,13 @@ usersList.push({
   specialty: ["Music"],
   residence: {city:"Los Angeles",    province:"California", country:"United States"},
   age: 35,
-  gender: "🚺",
+  gender: "Female",
   contactInfo: { phone:"(555) 555-5555",
     skype:"queenbey" } ,
   auth: 0,
   professional: true,
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
   availability: {
     morning: false,
     noon: true,
@@ -37,11 +39,12 @@ usersList.push({
   specialty: ["Medicine"],
   residence: {city:"London", country:"England"},
   age: 29,
-  gender: "🚺",
+  gender: "Female",
   contactInfo: { phone:"(555) 555-5555",
     skype:"adele" } ,
   auth: 0,
   professional: false,
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
   availability: {
     morning: false,
     noon: true,
@@ -61,11 +64,12 @@ usersList.push({
   specialty: ["Government"],
   residence: {city:"Washington", province:"D.C.", country:"United States"},
   age: 55,
-  gender: "🚹",
+  gender: "Male",
   contactInfo: { phone:"(555) 555-5555",
     skype:"potus44" } ,
   auth: 0,
   professional: true,
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
   availability: {
     morning: true,
     noon: true,
@@ -85,11 +89,12 @@ usersList.push({
   specialty: ["Translation"],
   residence: {city:"Palo Alto", province:"California", country:"United States"},
   age: 26,
-  gender: "🚹",
+  gender: "Male",
   contactInfo: { phone:"(555) 555-5555",
     skype:"aapiane09" } ,
   auth: 0,
   professional: true,
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
   availability: {
     morning: false,
     noon: true,
@@ -97,7 +102,7 @@ usersList.push({
     evening: true,
     night: true
   },
-  profilepic: "http://cultofthepartyparrot.com/assets/sirocco.gif"
+  profilepic: "/images/sirocco.gif"
 });
 usersList.push({
   firstName: "Jesse",
@@ -109,11 +114,12 @@ usersList.push({
   specialty: ["Translation", "Medicine"],
   residence: {city:"Amman", province:"Amman", country:"Jordan"},
   age: 32,
-  gender: "🚻",
+  gender: "Other",
   contactInfo: { phone:"(555) 555-5555",
     skype:"jsmith" } ,
   auth: 0,
   professional: true,
+  blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus id ante imperdiet bibendum. Praesent ultricies facilisis risus, vel commodo urna ultrices at. In hac habitasse platea dictumst. Suspendisse fringilla eu nisi sit amet hendrerit. Ut sed erat porttitor, molestie dui vel, blandit urna. Aenean eget erat quam. Ut luctus sagittis mi eu porttitor. Praesent in ornare lacus. Cras nibh arcu, feugiat ac tempus vitae, feugiat eu lorem. Pellentesque vitae dolor tempor, ullamcorper dui eget, ullamcorper nunc. Sed ultricies urna nulla. Donec fringilla nibh ut sapien mollis posuere. Donec semper massa tristique ultricies tincidunt. Proin nec mi lectus. Phasellus hendrerit pretium libero non sollicitudin. Fusce tincidunt, sapien a tristique placerat, dolor lacus bibendum sem, a feugiat nibh risus in tortor. <br> Aenean pretium pellentesque auctor. Cras vel neque justo. Nulla in nisi accumsan, condimentum lorem id, faucibus lectus. Sed tincidunt convallis sapien. Sed ut libero eget elit lacinia mattis. Aliquam erat volutpat. Nunc sollicitudin purus mauris, eu tincidunt diam lobortis id. Donec ut mollis orci, at semper tellus. Aliquam vitae pretium nunc, ut interdum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget odio nulla. Vestibulum eu suscipit ex, eget lacinia arcu. Pellentesque placerat suscipit metus non ultrices.",
   availability: {
     morning: false,
     noon: false,

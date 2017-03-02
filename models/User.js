@@ -24,7 +24,8 @@ var userSchema = new Schema({
   auth: Number,
   professional: Boolean,
   availability: [ Availability.schema ],
-  profilepic: String
+  profilepic: String,
+  blurb: String
 });
 
 userSchema.pre('save', function (next) {
