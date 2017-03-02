@@ -6,6 +6,9 @@ nav {
   height: 60px;
   width: 100%;
   background-color: #FF4338;
+  .half {
+    width: 45%;
+  }
 }
 
 #logo span {
@@ -29,13 +32,13 @@ ul {
       border-radius: 2px;
       box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
     }
-    #login {
+    #login, #logout {
       color: white;
     }
-    #login:hover {
+    #login:hover, #logout:hover {
       opacity: .6;
     }
-    #signup {
+    #signup, #translatorslink, #profile {
       background-color: white;
       color: #FF4338;
     }
@@ -44,4 +47,23 @@ ul {
 
 .container {
   padding: 5% 0;
+}
+
+@media (max-width:550px) {
+  nav {
+    height: 120px;
+    text-align: center;
+    #logo span {
+      padding-left: 0px;
+    }
+    ul a li {
+      float: none;
+    }
+  }
+
+  img.cardprofilepic {
+    margin: 10px 25%;
+    width: 50%;
+
+  }
 }

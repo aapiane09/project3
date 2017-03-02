@@ -830,6 +830,8 @@ nav {
   height: 60px;
   width: 100%;
   background-color: #FF4338; }
+  nav .half {
+    width: 45%; }
 
 #logo span {
   padding-left: 30px;
@@ -850,16 +852,28 @@ ul {
       border: 1px solid white;
       border-radius: 2px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3); }
-    ul a #login {
+    ul a #login, ul a #logout {
       color: white; }
-    ul a #login:hover {
+    ul a #login:hover, ul a #logout:hover {
       opacity: .6; }
-    ul a #signup {
+    ul a #signup, ul a #translatorslink, ul a #profile {
       background-color: white;
       color: #FF4338; }
 
 .container {
   padding: 5% 0; }
+
+@media (max-width: 550px) {
+  nav {
+    height: 120px;
+    text-align: center; }
+    nav #logo span {
+      padding-left: 0px; }
+    nav ul a li {
+      float: none; }
+  img.cardprofilepic {
+    margin: 10px 25%;
+    width: 50%; } }
 
 #heroimg {
   background-image: url("/images/hero-img.jpg");
@@ -944,3 +958,13 @@ hr {
   width: 100%;
   border: 1px solid black;
   border-radius: 100%; }
+
+#usernameedit {
+  width: 50%;
+  margin-left: 25%; }
+
+#ageselect {
+  margin-left: 30%; }
+
+textarea {
+  width: 100%; }

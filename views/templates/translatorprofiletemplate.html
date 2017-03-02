@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row profilecard">
+      <div class="three columns">
+        <img id="profilepic" src={{translatorsShowCtrl.user.profilepic}}>
+      </div>
+      <div class="nine columns">
+        <div class="row">
+          <div class="seven columns bio">
+            <h1 class="username-bio">{{translatorsShowCtrl.user.username}}</h1>
+            <br>
+            <span class="fullname">
+              <h4>{{translatorsShowCtrl.user.firstName}} {{translatorsShowCtrl.user.lastName}}</h4>
+            </span>
+            <span class="agegender-bio">
+              <h5>{{translatorsShowCtrl.user.age}} | {{translatorsShowCtrl.user.gender}}</h5>
+            </span>
+            <span class="location-bio">
+              <h5>{{translatorsShowCtrl.user.residence[0].city}}, {{translatorsShowCtrl.user.residence[0].province}},  {{translatorsShowCtrl.user.residence[0].country}}</h5>
+            </span>
+          </div>
+          <div class="five columns">
+            <h5 class="contactlistheader">Contact</h5>
+            <hr>
+            <ul class="u-pull-left">
+              <li class="contactinfolist"><strong>email</strong>: {{translatorsShowCtrl.user.email}}</li>
+              <li class="contactinfolist" ng-repeat="(key, value) in translatorsShowCtrl.user.contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row profilecard">
+      <div class="twelve columns blurb">
+        <h5>About Me</h5>
+        <span>{{translatorsShowCtrl.user.blurb}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <h3 class="skillheader"><strong>Languages</strong></h3>
+        <span class="skillbtn" ng-repeat="lang in translatorsShowCtrl.user.language | filter : filters : true">
+          {{lang}}
+        </span>
+      </div>
+      <div class="six columns">
+        <h3 class="skillheader"><strong>Specialties</strong></h3>
+        <span class="skillbtn" ng-repeat="specialty in translatorsShowCtrl.user.specialty">
+            {{specialty}}
+        </span>
+      </div>
+    </div>
+</div>

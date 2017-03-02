@@ -30,6 +30,14 @@ function config (  $routeProvider,   $locationProvider  )  {
         loginRequired: loginRequired
       }
     })
+    .when('/translators/:id', {
+      controller: 'TranslatorsShowController',
+      templateUrl: '/templates/translatorprofiletemplate',
+      controllerAs: 'translatorsShowCtrl',
+      resolve: {
+        loginRequired: loginRequired
+      }
+    })
     .when('/signup', {
       controller: 'SignupController',
       templateUrl: '/templates/signuptemplate',
