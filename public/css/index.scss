@@ -10,10 +10,31 @@
 }
 
 #splash {
-  margin-top: 100px;
-  background-color: white;
-  opacity: .7;
+  margin-top: 130px;
+  background-color: rgba(255, 255, 255, .7);
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 1px;
   height: 350px;
+  color: black;
+  text-align: center;
+  strong{
+    font-size: 3em;
+    opacity: 1;
+  }
+  p {
+    font-size: 1.75em;
+  }
+  a {
+    background-color: #FF4338;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid white;
+  }
+  a:hover {
+    background-color: white;
+    color: #FF4338;
+    border: #FF4338 solid 1px;
+  }
 }

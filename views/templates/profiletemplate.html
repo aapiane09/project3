@@ -2,7 +2,7 @@
   <form ng-submit="profileCtrl.updateProfile()">
     <div class="row profilecard">
       <div class="three columns">
-        <img id="profilepic" src={{mainCtrl.currentUser().profilepic}}>
+        <img id="profilepic" class="profilepic" src={{mainCtrl.currentUser().profilepic}}>
         <br>
           <div class="ten columns offset-by-one">
             <button id="editbutton" class="u-full-width" ng-click="editing=!editing" ng-hide="editing">Edit Profile </button>
@@ -17,12 +17,12 @@
             <br>
             <span class="fullname">
               <h4 ng-hide="editing">{{mainCtrl.currentUser().firstName}} {{mainCtrl.currentUser().lastName}}</h4>
-              <input type="text" ng-model="profileCtrl.new_profile.firstName" ng-value="mainCtrl.currentUser().firstName" placeholder="First Name" ng-show="editing">
-              <input type="text" ng-model="profileCtrl.new_profile.lastName" ng-value="mainCtrl.currentUser().lastName" placeholder="Last Name" ng-show="editing">
+              <input type="text" class="half" ng-model="profileCtrl.new_profile.firstName" ng-value="mainCtrl.currentUser().firstName" placeholder="First Name" ng-show="editing">
+              <input type="text" class="half" ng-model="profileCtrl.new_profile.lastName" ng-value="mainCtrl.currentUser().lastName" placeholder="Last Name" ng-show="editing">
             </span>
             <span class="agegender-bio">
               <h5 ng-hide="editing">{{mainCtrl.currentUser().age}} | {{mainCtrl.currentUser().gender}}</h5>
-              <input id="ageselect" type="number" min=18 max=125 ng-model="profileCtrl.new_profile.age" ng-value="mainCtrl.currentUser().age" placeholder="Username" ng-show="editing">
+              <input id="ageedit" type="number" min=18 max=125 ng-model="profileCtrl.new_profile.age" ng-value="mainCtrl.currentUser().age" placeholder="Username" ng-show="editing">
               <select id="genderselect" ng-model="profileCtrl.new_profile.gender" ng-value="mainCtrl.currentUser().gender" ng-show="editing">
                 <option value="Male">🚹  Male</option>
                 <option value="Female">🚺  Female</option>
@@ -39,7 +39,7 @@
             <ul class="u-pull-left">
               <li class="contactinfolist" ng-hide="editing"><strong>email</strong>: {{mainCtrl.currentUser().email}}</li>
               <strong ng-show="editing">email</strong>: <input type="text" ng-model="profileCtrl.new_profile.email" ng-value="mainCtrl.currentUser().email" ng-show="editing">
-              <li class="contactinfolist" ng-repeat="(key, value) in mainCtrl.currentUser().contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
+              <li class="contactinfolist repeat" ng-repeat="(key, value) in mainCtrl.currentUser().contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
             </ul>
           </div>
         </div>

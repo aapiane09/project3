@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Supermercado+One");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -824,7 +825,8 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 body {
-  background-color: #F1F1F1; }
+  background-color: #F1F1F1;
+  font-family: "Noto Sans", sans-serif; }
 
 nav {
   height: 60px;
@@ -836,7 +838,13 @@ nav {
 #logo span {
   padding-left: 30px;
   display: inline-block;
-  font-size: 2.28em; }
+  font-size: 2.28em;
+  font-family: 'Supermercado One', cursive; }
+  #logo span a {
+    color: white;
+    text-decoration: none; }
+  #logo span a:hover {
+    color: black; }
 
 ul {
   float: right;
@@ -863,18 +871,6 @@ ul {
 .container {
   padding: 5% 0; }
 
-@media (max-width: 550px) {
-  nav {
-    height: 120px;
-    text-align: center; }
-    nav #logo span {
-      padding-left: 0px; }
-    nav ul a li {
-      float: none; }
-  img.cardprofilepic {
-    margin: 10px 25%;
-    width: 50%; } }
-
 #heroimg {
   background-image: url("/images/hero-img.jpg");
   background-position: center;
@@ -882,16 +878,32 @@ ul {
   min-height: 700px; }
 
 #splash {
-  margin-top: 100px;
-  background-color: white;
-  opacity: .7;
+  margin-top: 130px;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 2px solid white;
-  border-radius: 10px;
-  height: 350px; }
+  border-radius: 1px;
+  height: 350px;
+  color: black;
+  text-align: center; }
+  #splash strong {
+    font-size: 3em;
+    opacity: 1; }
+  #splash p {
+    font-size: 1.75em; }
+  #splash a {
+    background-color: #FF4338;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid white; }
+  #splash a:hover {
+    background-color: white;
+    color: #FF4338;
+    border: #FF4338 solid 1px; }
 
 .translators .four {
-  margin-left: 0;
-  width: 33%; }
+  margin-left: 0; }
   .translators .four .select {
     border-radius: 0; }
 
@@ -914,13 +926,6 @@ ul {
   border-radius: 100%;
   margin: 10% 0 0 10%; }
 
-.name {
-  display: inline;
-  margin-right: 5%; }
-
-.location {
-  margin-left: 5%; }
-
 .username-bio, .agegender-bio, .location-bio, .contactlistheader, .fullname {
   text-align: center;
   margin: 0; }
@@ -931,8 +936,13 @@ ul {
   display: inline-block;
   padding: 5px 10px; }
 
-.languages, .specialties {
-  overflow: scroll; }
+.languagesspecialties {
+  word-wrap: break-word; }
+
+.query {
+  -webkit-column-break-after: always;
+  page-break-after: always;
+  break-after: always; }
 
 hr {
   margin: 3px; }
@@ -979,8 +989,41 @@ span.skillbtn {
   width: 50%;
   margin-left: 25%; }
 
-#ageselect {
-  margin-left: 30%; }
+#ageedit {
+  margin-left: 25%; }
 
 textarea {
   width: 100%; }
+
+@media (max-width: 550px) {
+  nav {
+    height: 120px;
+    text-align: center; }
+    nav #logo span {
+      padding-left: 0px; }
+    nav ul {
+      margin-left: 10px;
+      float: none; }
+      nav ul a li {
+        float: none;
+        margin-left: -10px; }
+  img.cardprofilepic {
+    margin: 10px 25%;
+    width: 50%; }
+  .languagesspecialties {
+    width: 100%; }
+  #profilepic {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 100%; }
+  .profilepic {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 25%; }
+  .query {
+    text-align: center; }
+  .repeat {
+    width: 100%; }
+  .half {
+    width: 50%;
+    margin: 0 25%; } }

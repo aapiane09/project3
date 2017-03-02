@@ -1,6 +1,5 @@
 .translators .four {
   margin-left: 0;
-  width: 33%;
   .select {
     border-radius: 0;
   }
@@ -29,15 +28,6 @@
   margin: 10% 0 0 10%;
 }
 
-.name {
-  display: inline;
-  margin-right: 5%;
-}
-
-.location {
-  margin-left: 5%;
-}
-
 .username-bio, .agegender-bio, .location-bio, .contactlistheader, .fullname {
   text-align: center;
   margin: 0;
@@ -51,8 +41,13 @@
 
 }
 
-.languages, .specialties {
-  overflow: scroll;
+.languagesspecialties {
+  // width: 100%;
+  word-wrap: break-word;
+}
+
+.query {
+  break-after: always;
 }
 
 hr {

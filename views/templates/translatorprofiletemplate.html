@@ -23,7 +23,7 @@
             <hr>
             <ul class="u-pull-left">
               <li class="contactinfolist"><strong>email</strong>: {{translatorsShowCtrl.user.email}}</li>
-              <li class="contactinfolist" ng-repeat="(key, value) in translatorsShowCtrl.user.contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
+              <li class="contactinfolist repeat" ng-repeat="(key, value) in translatorsShowCtrl.user.contactInfo[0]" ng-hide="editing || key === '_id'"><strong>{{key}}</strong>: {{value}}</li>
             </ul>
           </div>
         </div>

@@ -1,19 +1,21 @@
-<form id="loginform" ng-submit="loginCtrl.login()">
-  <div class="row">
-    <div class="one-third column offset-by-four">
-      <label for="email">Email Address</label>
-      <input type="text" class="u-full-width" id="email" ng-model="loginCtrl.new_user.email"></input>
+<div class="container">
+  <form id="loginform" ng-submit="loginCtrl.login()">
+    <div class="row">
+      <div class="one-third column offset-by-four">
+        <label for="email">Email Address</label>
+        <input type="text" class="u-full-width" id="email" ng-model="loginCtrl.new_user.email"></input>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="one-third column offset-by-four">
-      <label for="password">Password</label>
-      <input type="password" class="u-full-width" id="password" ng-model="loginCtrl.new_user.password"></input>
+    <div class="row">
+      <div class="one-third column offset-by-four">
+        <label for="password">Password</label>
+        <input type="password" class="u-full-width" id="password" ng-model="loginCtrl.new_user.password"></input>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="one-third column offset-by-four">
-      <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Log In"></input>
+    <div class="row">
+      <div class="one-third column offset-by-four">
+        <input id="searchBtn" class="button-primary u-full-width" type="submit" value="Log In"></input>
+      </div>
     </div>
-  </div>
-</form>
+  </form>  
+</div>

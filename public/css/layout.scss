@@ -1,5 +1,6 @@
 body {
   background-color: #F1F1F1;
+  font-family: "Noto Sans", sans-serif;
 }
 
 nav {
@@ -15,6 +16,14 @@ nav {
   padding-left: 30px;
   display: inline-block;
   font-size: 2.28em;
+  font-family: 'Supermercado One', cursive;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+  }
 }
 
 ul {
@@ -47,23 +56,4 @@ ul {
 
 .container {
   padding: 5% 0;
-}
-
-@media (max-width:550px) {
-  nav {
-    height: 120px;
-    text-align: center;
-    #logo span {
-      padding-left: 0px;
-    }
-    ul a li {
-      float: none;
-    }
-  }
-
-  img.cardprofilepic {
-    margin: 10px 25%;
-    width: 50%;
-
-  }
 }

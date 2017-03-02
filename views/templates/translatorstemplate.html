@@ -77,15 +77,25 @@
     <div class="ten columns">
       <div class="row">
         <div class="eight columns bio">
-          <h5 class="name"><a href="/translators/{{user._id}}">{{user.username}}</a></h5><span class="agegender">{{user.age}} | {{user.gender}}</span><span class="location">{{user.residence[0].city}}, {{user.residence[0].country}}</span>
+          <div class="row query">
+            <div class="four columns">
+              <h5 class="name query"><a href="/translators/{{user._id}}">{{user.username}}</a></h5>
+            </div>
+            <div class="three columns">
+              <span class="agegender query">{{user.age}} | {{user.gender}}</span>
+            </div>
+            <div class="five columns">
+              <span class="location query">{{user.residence[0].city}}, {{user.residence[0].country}}</span>
+            </div>
+          </div>
           <span class="blurb">{{user.blurb | words:50 }}</span>
         </div>
-        <div class="four columns">
+        <div class="four columns languagesspecialties">
           <h6><strong>Languages</strong></h6>
-          <span class="languages" ng-repeat="lang in user.language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;</span></span>
+          <span class="languages" ng-repeat="lang in user.language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;<wbr></span></span>
           <hr>
           <h6><strong>Specialties</strong></h6>
-          <span class="specialties" ng-repeat="specialty in user.specialty">{{specialty}}<span ng-hide="$last">,&nbsp;</span></span>
+          <span class="specialties" ng-repeat="specialty in user.specialty">{{specialty}}<span ng-hide="$last">,&nbsp;<wbr></span></span>
         </div>
       </div>
     </div>
