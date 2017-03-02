@@ -881,6 +881,14 @@ ul {
   background-size: cover;
   min-height: 700px; }
 
+#splash {
+  margin-top: 100px;
+  background-color: white;
+  opacity: .7;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 350px; }
+
 .translators .four {
   margin-left: 0;
   width: 33%; }
@@ -922,6 +930,9 @@ ul {
   font-size: .85em;
   display: inline-block;
   padding: 5px 10px; }
+
+.languages, .specialties {
+  overflow: scroll; }
 
 hr {
   margin: 3px; }
