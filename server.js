@@ -114,6 +114,10 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
          city: req.body.residence.city,
          province: req.body.residence.province,
          country: req.body.residence.country
+       },
+       contact: {
+         phone: req.body.contact.phone,
+         skype: req.body.contact.skype
        }
       //  availability: {
       //    morning: req.body.availability.morning,

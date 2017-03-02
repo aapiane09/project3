@@ -8,15 +8,11 @@ function index(req, res) {
       //User endpoints
       {method: "GET", path: "/api/users", description: "get all users as JSON"},
       {method: "GET", path: "/api/users/:userId", description: "get one specific user as JSON"},
-      //residence endpoints
-      {method: "GET", path: "/api/users/userId/residence", description: "get all residences from a user"},
-      //contact endpoints
-      {method: "GET", path: "/api/users/:userId/contact", description: "get contact information from a user as JSON"},
-      //availability endpoints
-      {method: "GET", path: "/api/users/:userId/availability", description: "get a user's available"}
-      // {method: "PUT", path: "/api/users/:userId/places/:placeId", description: "Updates one place atributes"},
-      // {method: "PATCH", path: "/api/users/:userId/places/:placeId", description: "Updates one place atributes"},
-      // {method: "DELETE", path: "/api/users/:userId/places/:placeId", description: "Deletes one specific place from a user"}
+      {method: "PUT", path: "/api/me", description: "Updates your own profile"},
+      // {method: "DELETE", path: "/api/me", description: "Deletes your own profile"},
+      //auth endpoints
+      {method: "POST", path: "/auth/signup", description: "creates and logs in a user"},
+      {method: "POST", path: "/auth/login", description: "logs in a user"}
     ]
   });
 }
