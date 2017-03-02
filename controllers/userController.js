@@ -14,7 +14,7 @@ function users_index(req, res){
 // GET /api/users/:userId
 //get one specific user
 function users_show(req, res) {
-  db.User.findOne({_id: req.params.userId}, function(err, foundUser){
+  db.User.findOne({_id: req.params.id}, function(err, foundUser){
     res.json(foundUser);
     console.log(foundUser)
   });
