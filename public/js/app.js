@@ -278,5 +278,17 @@ function Account($http, $q, $auth) {
     );
   }
 
+  // function deleteProfile(profileData) {
+  //   return (
+  //     $http
+  //       .delete('/api/me')
+  //       .then(
+  //         function () {
+  //           $auth.logout();
+  //         }
+  //       )
+  //   );
+  // }
+
 
 }

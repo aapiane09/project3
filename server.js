@@ -76,6 +76,15 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
   });
 });
 
+// app.delete('/api/me', auth.ensureAuthenticated, function (req, res) {
+//   db.User.findById(req.user, function (err, user) {
+//     if (!user) {
+//       return res.status(400).send({ message: 'User not found.' });
+//     }
+//     user.remove();
+//   });
+//  });
+
 
  // app.get('/api', function api (req, res) {
  //   res.sendFile(controllers.api.index);
