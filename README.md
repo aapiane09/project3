@@ -66,6 +66,7 @@ The Intrpretr API provides the following JSON endpoints:
 ##Next Steps
 
 * Full CRUD (unable to update embedded data, can delete but can't redirect to /logout after delete)
+* Ability to upload photos to database
 * Different language versions of site
 * Authorization
 * Rating and Reviews
