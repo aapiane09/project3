@@ -45,7 +45,7 @@ The Intrpretr API provides the following JSON endpoints:
 * ```POST /auth/login ``` logs in a user
 ]
 
-## Code We Are Proud Of
+## Code I Am Proud Of
 
 ```
       ### HTML ###
@@ -75,6 +75,6 @@ The Intrpretr API provides the following JSON endpoints:
 * Messaging
 * Set up in-app payments if translators/interpreters want compensation for their time
 
-** Screenshots
+## Screenshots
 
 [Go to Imgur] (http://imgur.com/a/CTvKz)
