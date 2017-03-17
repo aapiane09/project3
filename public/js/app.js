@@ -6,7 +6,32 @@ angular.module('intrpretr', ['ngRoute', 'satellizer', 'truncate'])
        .controller('MainController', MainController)
        .controller('SignupController', SignupController)
        .controller('LoginController', LoginController)
-       .controller('LogoutController', LogoutController);
+       .controller('LogoutController', LogoutController)
+       .directive('passwordConfirm', ['$parse', function ($parse) {
+         return {
+            restrict: 'A',
+            scope: {
+              matchTarget: '=',
+            },
+            require: 'ngModel',
+            link: function link(scope, elem, attrs, ctrl) {
+              var validator = function (value) {
+                ctrl.$setValidity('match', value === scope.matchTarget);
+                return value;
+              }
+
+              ctrl.$parsers.unshift(validator);
+              ctrl.$formatters.push(validator);
+
+              // This is to force validator when the original password gets changed
+              scope.$watch('matchTarget', function(newval, oldval) {
+                validator(ctrl.$viewValue);
+              });
+
+            }
+          };
+        }]);
+
 
 
   ////////////
@@ -154,12 +179,13 @@ function SignupController ($location, Account) {
   vm.new_user = {}; // form data
 
   vm.signup = function() {
+    console.log(vm.new_user);
     Account
       .signup(vm.new_user)
       .then(
         function (response) {
           vm.new_user = {}; // clear sign up form
-          $location.path('/profile'); // redirect to '/profile'
+          // $location.path('/profile'); // redirect to '/profile'
         }
       );
   };
