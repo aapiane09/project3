@@ -28,6 +28,11 @@
         </div>
         <span ng-show="signupform.passwordConfirmation.$error.match">Passwords do not match.</span>
       </div>
+      <div class="one-third column">
+        <label for="username">Username</label>
+        <input required type="text" class="u-full-width" id="username" ng-model="signupCtrl.new_user.username" maxlength="13"/>
+      </div>
+
     </div>
     <hr>
     <div class="row">
