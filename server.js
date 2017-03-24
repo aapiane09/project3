@@ -106,32 +106,25 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
        }
      }
      var user = new db.User({
-      //  firstName: req.body.firstName,
-      //  lastName: req.body.lastName,
+       firstName: req.body.firstName,
+       lastName: req.body.lastName,
        username: req.body.username,
        email: req.body.email,
-       password: req.body.password
-      //  language: req.body.language,
-      //  age: parseInt(req.body.age),
-      //  gender: req.body.gender,
-      //  specialty: req.body.specialty,
-      //  profilepic: req.body.profilepic,
-      //  residence: {
-      //    city: req.body.residence.city,
-      //    province: req.body.residence.province,
-      //    country: req.body.residence.country
-      //  },
-      //  contact: {
-      //    phone: req.body.contact.phone,
-      //    skype: req.body.contact.skype
-      //  }
-      //  availability: {
-      //    morning: req.body.availability.morning,
-      //    noon: req.body.availability.noon,
-      //    afternoon: req.body.availability.afternoon,
-      //    evening: req.body.availability.evening,
-      //    night: req.body.availability.night
-      //  }
+       password: req.body.password,
+       language: req.body.language,
+       age: parseInt(req.body.age),
+       gender: req.body.gender,
+       specialty: req.body.specialty,
+       profilepic: req.body.profilepic,
+       residence: {
+         city: req.body.residence.city,
+         province: req.body.residence.province,
+         country: req.body.residence.country
+       },
+       contact: {
+         phone: req.body.contact.phone,
+         skype: req.body.contact.skype
+       }
      });
      user.save(function (err, result) {
        if (err) {

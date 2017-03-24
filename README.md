@@ -1,4 +1,4 @@
-# [Intrpretr] (https://intrpretr.herokuapp.com/)
+# [Intrpretr](https://intrpretr.herokuapp.com/)
 Intrpretr allows for people who don't speak English well to access assistance for events in their daily lives that might require a specialized English vocabulary, such as a trip to the doctor or to open a bank account.
 
 ## Motivation
@@ -45,25 +45,7 @@ The Intrpretr API provides the following JSON endpoints:
 * ```POST /auth/login ``` logs in a user
 ]
 
-## Code I Am Proud Of
-
-```
-      ### HTML ###
-        <div class="four columns languagesspecialties">
-          <h6><strong>Languages</strong></h6>
-          <span class="languages" ng-repeat="lang in user.language | filter : filters : true">{{lang}}<span ng-hide="$last">,&nbsp;<wbr></span></span>
-          <hr>
-          <h6><strong>Specialties</strong></h6>
-          <span class="specialties" ng-repeat="specialty in user.specialty">{{specialty}}<span ng-hide="$last">,&nbsp;<wbr></span></span>
-        </div>
-
-      ### CSS ###
-        .languagesspecialties {
-          word-wrap: break-word;
-        }
-```
-
-##Next Steps
+## Next Steps
 
 * Full CRUD (unable to update embedded data, can delete but can't redirect to /logout after delete)
 * Ability to upload photos to database
