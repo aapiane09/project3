@@ -110,7 +110,7 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
        lastName: req.body.lastName,
        username: req.body.username,
        email: req.body.email,
-       password: req.body.password
+       password: req.body.password,
        language: req.body.language,
        age: parseInt(req.body.age),
        gender: req.body.gender,

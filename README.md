@@ -45,7 +45,7 @@ The Intrpretr API provides the following JSON endpoints:
 * ```POST /auth/login ``` logs in a user
 ]
 
-##Next Steps
+## Next Steps
 
 * Full CRUD (unable to update embedded data, can delete but can't redirect to /logout after delete)
 * Ability to upload photos to database
