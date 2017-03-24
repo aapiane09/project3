@@ -95,30 +95,36 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
   */
 
  app.post('/auth/signup', function (req, res) {
-   db.User.findOne({ email: req.body.email }, function (err, existingUser) {
-     if (existingUser) {
-       return res.status(409).send({ message: 'Email is already taken.' });
+   db.User.find({$or:[ {'username': req.body.username}, {'email': req.body.email}]}, function (err, existingUser) {
+     console.log(existingUser);
+     if (existingUser.length != 0) {
+       if (existingUser[0].email == req.body.email) {
+         return res.status(409).send({ message: 'Email is already taken.' });
+       }
+       else if (existingUser[0].username == req.body.username) {
+         return res.status(409).send({ message: 'Username is already taken.' });
+       }
      }
      var user = new db.User({
-       firstName: req.body.firstName,
-       lastName: req.body.lastName,
+      //  firstName: req.body.firstName,
+      //  lastName: req.body.lastName,
        username: req.body.username,
        email: req.body.email,
-       password: req.body.password,
-       language: req.body.language,
-       age: parseInt(req.body.age),
-       gender: req.body.gender,
-       specialty: req.body.specialty,
-       profilepic: req.body.profilepic,
-       residence: {
-         city: req.body.residence.city,
-         province: req.body.residence.province,
-         country: req.body.residence.country
-       },
-       contact: {
-         phone: req.body.contact.phone,
-         skype: req.body.contact.skype
-       }
+       password: req.body.password
+      //  language: req.body.language,
+      //  age: parseInt(req.body.age),
+      //  gender: req.body.gender,
+      //  specialty: req.body.specialty,
+      //  profilepic: req.body.profilepic,
+      //  residence: {
+      //    city: req.body.residence.city,
+      //    province: req.body.residence.province,
+      //    country: req.body.residence.country
+      //  },
+      //  contact: {
+      //    phone: req.body.contact.phone,
+      //    skype: req.body.contact.skype
+      //  }
       //  availability: {
       //    morning: req.body.availability.morning,
       //    noon: req.body.availability.noon,
