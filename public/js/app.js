@@ -1,5 +1,3 @@
-console.log('App.js Sanity Check');
-
 angular.module('intrpretr', ['ngRoute', 'satellizer', 'truncate'])
        .config(config)
        .service('Account', Account)
@@ -179,20 +177,15 @@ function SignupController ($location, Account) {
   vm.new_user = {}; // form data
 
   vm.signup = function() {
-    console.log(vm.new_user);
     Account
       .signup(vm.new_user)
       .then(
         function (response) {
-          console.log('vvv Signup Response vvv');
-          console.log(response);
           if (response === undefined) {
-            console.log("Res undefined")
             vm.new_user = {}; // clear sign up form
             $location.path('/profile'); // redirect to '/profile'
           }
           else if (response === null) {
-            console.log("Null response")
           }
         }
       );
@@ -210,7 +203,6 @@ function SignupController ($location, Account) {
 
 LogoutController.$inject = ["$location", "Account"]; // minification protection
 function LogoutController ($location, Account) {
-  console.log("Logout Controller loads!")
   Account
     .logout()
     .then(function () {
@@ -251,7 +243,6 @@ function Account($http, $q, $auth) {
 
           function onError(error) {
             alert(error.data.message);
-            console.error(error);
             return null;
           }
         )
@@ -268,7 +259,7 @@ function Account($http, $q, $auth) {
           },
 
           function onError(error) {
-            console.error(error);
+            alert(error.data.message);
           }
         )
     );
