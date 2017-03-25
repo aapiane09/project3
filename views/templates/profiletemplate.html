@@ -2,12 +2,12 @@
   <form ng-submit="profileCtrl.updateProfile()">
     <div class="row profilecard">
       <div class="three columns">
-        <img id="profilepic" class="profilepic" src={{mainCtrl.currentUser().profilepic}}>
-        <br>
-          <div class="ten columns offset-by-one">
-            <button id="editbutton" class="u-full-width" ng-click="editing=!editing" ng-hide="editing">Edit Profile </button>
-            <button id="submitedit" class="u-full-width" ng-show="editing" ng-click="editing=!editing" type="submit">Submit Edit</button>
-          </div>
+        <div class="eleven columns offset-by-one">
+          <img id="profilepic" class="profilepic" src={{mainCtrl.currentUser().profilepic}}>
+          <br>
+          <button id="editbutton" class="u-full-width" ng-click="editing=!editing" ng-hide="editing">Edit Profile </button>
+          <button id="editbutton" class="u-full-width" ng-show="editing" ng-click="editing=!editing" type="submit">Submit Edit</button>
+        </div>
       </div>
       <div class="nine columns">
         <div class="row">
@@ -28,6 +28,7 @@
                 <option value="Female">🚺  Female</option>
                 <option value="Other">🚻  Other</option>
               </select>
+              <input id="profilepicedit" class="u-full-width" type="text" ng-model="profileCtrl.new_profile.profilepic" ng-value="mainCtrl.currentUser().profilepic" placeholder="Please enter external URL" ng-show="editing">
             </span>
             <span class="location-bio">
               <h5 ng-hide="editing">{{mainCtrl.currentUser().residence[0].city}}, {{mainCtrl.currentUser().residence[0].province}},  {{mainCtrl.currentUser().residence[0].country}}</h5>

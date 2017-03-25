@@ -70,6 +70,7 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
     user.gender = req.body.gender || user.gender;
     user.specialty = req.body.specialty || user.specialty;
     user.blurb = req.body.blurb || user.blurb;
+    user.profilepic = req.body.profilepic || user.profilepic;
     user.save(function(err) {
       res.send(user);
     });
@@ -115,7 +116,7 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
        age: parseInt(req.body.age),
        gender: req.body.gender,
        specialty: req.body.specialty,
-       profilepic: req.body.profilepic,
+       profilepic: "http://i.imgur.com/U81CA5P.jpg",
        residence: {
          city: req.body.residence.city,
          province: req.body.residence.province,

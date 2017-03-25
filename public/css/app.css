@@ -982,7 +982,8 @@ span.skillbtn {
   margin-right: -10px; }
 
 #editbutton {
-  width: 100%; }
+  width: 100%;
+  margin-top: 10px; }
 
 #profilepic {
   width: 100%;
@@ -990,8 +991,7 @@ span.skillbtn {
   border-radius: 100%; }
 
 .profilepic {
-  margin-top: 10px;
-  margin-left: 20px; }
+  margin-top: 10px; }
 
 #usernameedit {
   width: 50%;
